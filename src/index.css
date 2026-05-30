@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-nunito: 'Nunito', sans-serif;
+  --font-fredoka: 'Fredoka One', cursive;
+  --color-primary: #7C3AED;
+  --color-primary-light: #A78BFA;
+  --color-secondary: #3B82F6;
+  --color-accent: #F59E0B;
+  --color-fun-green: #10B981;
+  --color-fun-pink: #EC4899;
+  --color-fun-orange: #FB923C;
+  --color-fun-cyan: #06B6D4;
+  --color-surface: #0F0A1E;
+  --color-surface-light: #1A1230;
+  --color-surface-card: #231B3A;
+  --color-surface-hover: #2D2348;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #A78BFA, #60A5FA, #F472B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #FBBF24, #FB923C, #F472B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0F0A1E 0%, #1A1040 30%, #15102A 60%, #0D0A18 100%);
+}
+
+.section-dark {
+  background: linear-gradient(180deg, #0F0A1E 0%, #140E28 100%);
+}
+
+.section-dark-alt {
+  background: linear-gradient(180deg, #140E28 0%, #1A1230 100%);
+}
+
+.section-dark-accent {
+  background: linear-gradient(135deg, #1A1040 0%, #15102A 50%, #0F0A1E 100%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+.blob-shape {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Dark mode card */
+.dark-card {
+  background: linear-gradient(135deg, rgba(35, 27, 58, 0.8), rgba(26, 18, 48, 0.9));
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.dark-card:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+/* Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0A1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2A5E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4C3675;
+}
+
+/* Print styles for documentation PDF */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  section, .bg-white {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: 9pt;
+  }
+  table {
+    font-size: 9pt;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
