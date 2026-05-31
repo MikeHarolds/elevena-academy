@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   Sparkles, BookOpen, Code, Brain, Palette, GraduationCap,
   Shield, ShieldCheck, Users, Clock, Star, CheckCircle,
@@ -8,11 +8,6 @@ import {
   Rocket, Menu, X, Bot, Wand2, Monitor, Wifi, Home as HomeIcon,
   DollarSign, Trophy, ChevronRight, LogIn
 } from 'lucide-react';
-import { getCourses, seedDefaultCourses } from '../utils/courses';
-import type { CourseData } from '../utils/courses';
-import { getPlans, seedDefaultPlans } from '../utils/plans';
-import type { PlanData } from '../utils/plans';
-import { getSettings } from '../utils/settings';
 
 export interface Registration {
   id: string;
@@ -438,6 +433,202 @@ function AllIncluded() {
   );
 }
 
+// ==================== COURSES DATA ====================
+interface CourseData {
+  title: string;
+  desc: string;
+  fullDesc: string;
+  image: string | null;
+  icon?: string;
+  age: string;
+  duration: string;
+  sessions: string;
+  price: string;
+  color: string;
+  borderColor: string;
+  tag: string;
+  gradientBg?: boolean;
+  highlights: string[];
+  curriculum: { day: string; title: string; topics: string[] }[];
+  outcomes: string[];
+  requirements: string[];
+}
+
+const coursesData: CourseData[] = [
+  {
+    title: 'Web Development for Kids',
+    desc: 'Children learn to build their own websites using HTML, CSS & JavaScript — real coding skills made fun and accessible.',
+    fullDesc: 'This hands-on course teaches children how to build real websites from scratch. Using beginner-friendly tools, kids will learn HTML to structure pages, CSS to style them beautifully, and basic JavaScript to add interactivity. By the end of the course, every child will have a live website they built themselves — a portfolio piece they can proudly share with family and friends.',
+    image: '/images/course-webdev.png',
+    age: 'Ages 7–16',
+    duration: '3 Days',
+    sessions: '6 sessions (2hrs each)',
+    price: '£75',
+    color: 'from-violet-500 to-blue-500',
+    borderColor: 'border-violet-500/25',
+    tag: '💻 Most Popular',
+    highlights: ['Build a real website', 'Learn HTML, CSS & JS basics', 'No experience needed', 'Take home a live site'],
+    curriculum: [
+      { day: 'Day 1', title: 'Getting Started with HTML', topics: ['What is a website?', 'Your first HTML page', 'Headings, paragraphs & images', 'Links and lists'] },
+      { day: 'Day 2', title: 'Styling with CSS', topics: ['Adding colours and fonts', 'Backgrounds and borders', 'Layout basics with flexbox', 'Making it look amazing'] },
+      { day: 'Day 3', title: 'Interactivity & Publishing', topics: ['Introduction to JavaScript', 'Adding buttons and alerts', 'Simple animations', 'Publishing your website live'] },
+    ],
+    outcomes: ['A published personal website', 'Understanding of web fundamentals', 'Confidence to continue coding', 'Certificate of completion'],
+    requirements: ['A laptop or computer with internet', 'No prior coding experience needed', 'Curiosity and enthusiasm!'],
+  },
+  {
+    title: 'Canva Design for Kids',
+    desc: 'Kids explore graphic design by creating posters, cards, and social media graphics using Canva — unleashing their inner artist.',
+    fullDesc: 'This creative course introduces children to the world of digital design using Canva — a fun, drag-and-drop design platform. Kids will learn about colours, typography, layout and composition while creating real projects like posters, greeting cards, presentation slides and social media graphics. Perfect for young artists who love to create and express themselves visually.',
+    image: '/images/course-canva.png',
+    age: 'Ages 6–14',
+    duration: '2 Days',
+    sessions: '4 sessions (2hrs each)',
+    price: '£60',
+    color: 'from-pink-500 to-rose-500',
+    borderColor: 'border-pink-500/25',
+    tag: '🎨 Creative',
+    highlights: ['Create real design projects', 'Learn design principles', 'Use Canva confidently', 'Build a creative portfolio'],
+    curriculum: [
+      { day: 'Day 1', title: 'Design Basics & Canva Fundamentals', topics: ['Introduction to Canva', 'Understanding colours and fonts', 'Working with shapes and images', 'Create your first poster'] },
+      { day: 'Day 2', title: 'Creative Projects & Portfolio', topics: ['Designing greeting cards', 'Creating presentation slides', 'Social media graphics', 'Building your design portfolio'] },
+    ],
+    outcomes: ['A digital design portfolio', 'Understanding of design principles', 'Canva proficiency', 'Certificate of completion'],
+    requirements: ['A laptop or tablet with internet', 'No design experience needed', 'A love for creativity!'],
+  },
+  {
+    title: 'French Language for Kids',
+    desc: 'A fun, interactive introduction to French — children learn greetings, colours, numbers and everyday phrases through games and songs.',
+    fullDesc: 'Bonjour! This immersive French course makes language learning exciting for children. Through interactive games, songs, stories and role-play, kids will learn everyday French vocabulary and phrases. The course covers greetings, colours, numbers, animals, food, family members and basic conversation — all taught in a way that feels like play, not study.',
+    image: '/images/course-french.png',
+    age: 'Ages 5–12',
+    duration: '4 Days',
+    sessions: '8 sessions (1.5hrs each)',
+    price: '£80',
+    color: 'from-blue-500 to-indigo-500',
+    borderColor: 'border-blue-500/25',
+    tag: '🇫🇷 Language',
+    highlights: ['Learn French through play', 'Native speaker methods', 'Songs, games & stories', 'Everyday conversation skills'],
+    curriculum: [
+      { day: 'Day 1', title: 'Bonjour! Greetings & Introductions', topics: ['Saying hello and goodbye', 'My name is… How are you?', 'Numbers 1–20', 'French songs and rhymes'] },
+      { day: 'Day 2', title: 'Colours, Animals & the World Around Us', topics: ['Colours in French', 'Animal names and sounds', 'Days of the week', 'Weather expressions'] },
+      { day: 'Day 3', title: 'Food, Family & Daily Life', topics: ['French food vocabulary', 'Family members', 'Likes and dislikes', 'Simple sentences'] },
+      { day: 'Day 4', title: 'Conversations & Celebration', topics: ['Ordering food in French', 'Asking and answering questions', 'Role-play activities', 'French culture & celebration'] },
+    ],
+    outcomes: ['200+ French vocabulary words', 'Basic conversation ability', 'Cultural awareness', 'Certificate of completion'],
+    requirements: ['A laptop or computer with internet', 'No French experience needed', 'A willingness to have fun!'],
+  },
+  {
+    title: 'AI & Machine Learning',
+    desc: 'Kids discover how AI works through hands-on experiments — training models, creating AI art and understanding smart technology.',
+    fullDesc: 'This fascinating course demystifies Artificial Intelligence for young minds. Children will learn how AI works through fun, hands-on experiments — training machine learning models, creating AI-generated art, understanding how voice assistants work, and exploring the ethics of AI. The course balances technical understanding with creativity, giving kids a real head start in the technology shaping their future.',
+    image: '/images/course-ai.png',
+    age: 'Ages 8–16',
+    duration: '3 Days',
+    sessions: '6 sessions (2hrs each)',
+    price: '£75',
+    color: 'from-emerald-500 to-teal-500',
+    borderColor: 'border-emerald-500/25',
+    tag: '🤖 STEM',
+    highlights: ['Train a real AI model', 'Create AI-generated art', 'Understand how AI thinks', 'Explore AI ethics & safety'],
+    curriculum: [
+      { day: 'Day 1', title: 'What is AI? How Machines Learn', topics: ['What is Artificial Intelligence?', 'How machines learn from data', 'Training vs inference', 'AI in everyday life'] },
+      { day: 'Day 2', title: 'Hands-On AI Experiments', topics: ['Training an image classifier', 'Creating AI-generated art', 'Natural language processing', 'Building a simple chatbot'] },
+      { day: 'Day 3', title: 'AI Safety & Future Skills', topics: ['Spotting AI mistakes', 'Deepfakes and misinformation', 'AI ethics for kids', 'Your future with AI'] },
+    ],
+    outcomes: ['Understanding of AI fundamentals', 'Hands-on ML experience', 'AI safety awareness', 'Certificate of completion'],
+    requirements: ['A laptop or computer with internet', 'No AI experience needed', 'Curiosity about technology!'],
+  },
+  {
+    title: 'Scratch Coding & Games',
+    desc: 'Children build their own interactive games and animations using Scratch — a visual coding platform designed just for young learners.',
+    fullDesc: 'Scratch is the world\'s most popular coding platform for kids, and this course teaches children how to use it to create their own games, animations and interactive stories. Using colourful drag-and-drop code blocks, kids learn programming concepts like loops, conditions, variables and events — all while having a blast building projects they can share with friends and family.',
+    image: '/images/course-scratch.png',
+    age: 'Ages 5–12',
+    duration: '3 Days',
+    sessions: '6 sessions (2hrs each)',
+    price: '£60',
+    color: 'from-amber-500 to-orange-500',
+    borderColor: 'border-amber-500/25',
+    tag: '🎮 Fun',
+    highlights: ['Build your own games', 'Visual drag-and-drop coding', 'No reading required', 'Share projects online'],
+    curriculum: [
+      { day: 'Day 1', title: 'Your First Scratch Project', topics: ['Introduction to Scratch', 'Sprites, backdrops and sounds', 'Moving and animating characters', 'Create a simple animation'] },
+      { day: 'Day 2', title: 'Building Interactive Games', topics: ['Loops and conditions', 'Scoring and variables', 'Collision detection', 'Build a catching game'] },
+      { day: 'Day 3', title: 'Advanced Projects & Sharing', topics: ['Creating a platformer game', 'Adding levels and power-ups', 'Sharing your project online', 'Game design showcase'] },
+    ],
+    outcomes: ['2-3 completed games', 'Understanding of coding logic', 'Problem-solving skills', 'Certificate of completion'],
+    requirements: ['A laptop or computer with internet', 'No coding experience needed', 'Imagination and creativity!'],
+  },
+  {
+    title: 'Python Programming',
+    desc: 'A beginner-friendly introduction to Python — kids write real code, solve puzzles, and build mini projects while learning core logic.',
+    fullDesc: 'Python is one of the world\'s most popular programming languages, and this course makes it accessible for young learners. Children will write real Python code from day one — solving puzzles, building calculators, creating text-based games and automating simple tasks. The course emphasises logical thinking and problem-solving while keeping things fun and achievable for young coders.',
+    image: '/images/course-python.png',
+    age: 'Ages 9–16',
+    duration: '4 Days',
+    sessions: '8 sessions (2hrs each)',
+    price: '£80',
+    color: 'from-green-500 to-emerald-500',
+    borderColor: 'border-green-500/25',
+    tag: '🐍 Coding',
+    highlights: ['Write real Python code', 'Build mini projects', 'Learn programming logic', 'Industry-standard language'],
+    curriculum: [
+      { day: 'Day 1', title: 'Python Basics & First Programs', topics: ['What is Python?', 'Variables and data types', 'Print statements and input', 'Build a simple calculator'] },
+      { day: 'Day 2', title: 'Logic & Decision Making', topics: ['If/else statements', 'Loops (for and while)', 'Building a number guessing game', 'Creating patterns with code'] },
+      { day: 'Day 3', title: 'Functions & Data Structures', topics: ['Writing functions', 'Lists and dictionaries', 'Working with text', 'Build a quiz program'] },
+      { day: 'Day 4', title: 'Final Project & Beyond', topics: ['Text-based adventure game', 'Turtle graphics art', 'Debugging techniques', 'Next steps in Python'] },
+    ],
+    outcomes: ['Multiple Python projects', 'Core programming concepts', 'Logical thinking skills', 'Certificate of completion'],
+    requirements: ['A laptop or computer with internet', 'Basic keyboard skills', 'No Python experience needed'],
+  },
+  {
+    title: 'Digital Art & Illustration',
+    desc: 'Young artists learn digital drawing techniques, character design and illustration tools to bring their imagination to life on screen.',
+    fullDesc: 'This creative course is perfect for children who love to draw and want to take their art digital. Using free, beginner-friendly tools, kids will learn digital drawing techniques, character design, colouring methods and how to create illustrations for stories and comics. The course nurtures artistic talent while building valuable digital skills for the modern creative world.',
+    image: null,
+    icon: '🎨',
+    age: 'Ages 6–14',
+    duration: '2 Days',
+    sessions: '4 sessions (2hrs each)',
+    price: '£60',
+    color: 'from-fuchsia-500 to-pink-500',
+    borderColor: 'border-fuchsia-500/25',
+    tag: '🖌️ Artistic',
+    gradientBg: true,
+    highlights: ['Learn digital drawing tools', 'Design your own characters', 'Create comic-style art', 'Build an art portfolio'],
+    curriculum: [
+      { day: 'Day 1', title: 'Digital Drawing Fundamentals', topics: ['Introduction to digital art tools', 'Brushes, layers and colours', 'Drawing basic shapes and forms', 'Your first digital illustration'] },
+      { day: 'Day 2', title: 'Character Design & Portfolio', topics: ['Character design principles', 'Facial expressions & poses', 'Creating a short comic strip', 'Building your art portfolio'] },
+    ],
+    outcomes: ['A digital art portfolio', 'Character designs', 'Comic strip creation', 'Certificate of completion'],
+    requirements: ['A laptop or tablet with internet', 'Optional: drawing tablet/stylus', 'A love for drawing!'],
+  },
+  {
+    title: 'Maths & Problem Solving',
+    desc: 'Interactive maths challenges and logic puzzles that make numbers exciting — building confidence and critical thinking skills.',
+    fullDesc: 'This course transforms maths from a subject into an adventure! Through interactive puzzles, logic challenges, pattern recognition and real-world problem solving, children develop a love for numbers. The course adapts to different age groups — younger children focus on number sense and patterns, while older children tackle logic puzzles, basic algebra concepts and mathematical thinking strategies.',
+    image: null,
+    icon: '🧮',
+    age: 'Ages 5–14',
+    duration: '3 Days',
+    sessions: '6 sessions (1.5hrs each)',
+    price: '£60',
+    color: 'from-cyan-500 to-blue-500',
+    borderColor: 'border-cyan-500/25',
+    tag: '🧠 Logic',
+    gradientBg: true,
+    highlights: ['Make maths fun', 'Logic puzzles & challenges', 'Build number confidence', 'Critical thinking skills'],
+    curriculum: [
+      { day: 'Day 1', title: 'Numbers & Patterns Adventure', topics: ['Fun with numbers', 'Pattern recognition', 'Number puzzles and tricks', 'Mental maths strategies'] },
+      { day: 'Day 2', title: 'Logic & Problem Solving', topics: ['Logic puzzles and riddles', 'Word problem strategies', 'Spatial reasoning challenges', 'Working backwards technique'] },
+      { day: 'Day 3', title: 'Maths Games & Brain Teasers', topics: ['Maths-based board games', 'Strategy and probability', 'Real-world maths challenges', 'Maths competition style questions'] },
+    ],
+    outcomes: ['Improved number confidence', 'Problem-solving strategies', 'Logical thinking skills', 'Certificate of completion'],
+    requirements: ['A laptop or computer with internet', 'No advanced maths needed', 'A curious mind!'],
+  },
+];
+
 // ==================== COURSE DETAIL MODAL ====================
 function CourseDetailModal({ course, onClose }: { course: CourseData; onClose: () => void }) {
   return (
@@ -612,16 +803,6 @@ function CourseDetailModal({ course, onClose }: { course: CourseData; onClose: (
 // ==================== COURSES SECTION ====================
 function Courses() {
   const [selectedCourse, setSelectedCourse] = useState<CourseData | null>(null);
-  const [courses, setCourses] = useState<CourseData[]>([]);
-
-  useEffect(() => {
-    seedDefaultCourses();
-    setCourses(getCourses().filter(c => c.active));
-    const interval = setInterval(() => {
-      setCourses(getCourses().filter(c => c.active));
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
@@ -640,9 +821,9 @@ function Courses() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {courses.map((course) => (
+            {coursesData.map((course, i) => (
               <div
-                key={course.id}
+                key={i}
                 className={`group bg-[#231B3A]/80 rounded-2xl overflow-hidden card-hover border ${course.borderColor} relative flex flex-col`}
               >
                 {/* Course Image */}
@@ -725,14 +906,12 @@ function Courses() {
 
 // ==================== PRICING ====================
 function Pricing() {
-  const [plans, setPlans] = useState<PlanData[]>([]);
-
-  useEffect(() => {
-    seedDefaultPlans();
-    setPlans(getPlans().filter(p => p.active));
-    const interval = setInterval(() => setPlans(getPlans().filter(p => p.active)), 2000);
-    return () => clearInterval(interval);
-  }, []);
+  const plans = [
+    { name: 'Early Bird', price: '£60', desc: 'Limited places', features: ['Full 3-day camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite'], cta: 'Secure Early Bird Place', color: 'from-amber-400 to-orange-500', popular: false },
+    { name: 'Standard Child Ticket', price: '£75', desc: 'Full 3-day online camp access', features: ['Full 3-day camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite', 'Priority support'], cta: 'Register Your Child', color: 'from-violet-500 to-blue-500', popular: true },
+    { name: 'Sibling Ticket', price: '£60', desc: 'For additional children', features: ['Full 3-day camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite'], cta: 'Book Sibling Place', color: 'from-emerald-400 to-green-500', popular: false },
+    { name: 'Family Bundle', price: '£150', desc: 'Up to 3 children', features: ['Full 3-day camp for 3 kids', 'All 8 bonuses per child', 'Certificates & badges', 'Parent showcase invite', 'Best value for families'], cta: 'Choose Family Bundle', color: 'from-pink-400 to-rose-500', popular: false },
+  ];
 
   return (
     <section id="pricing" className="py-16 md:py-24 section-dark-alt">
@@ -742,18 +921,18 @@ function Pricing() {
           <h2 className="text-3xl md:text-5xl font-[Fredoka_One] text-white mb-4">Choose the Right <span className="gradient-text">Plan for Your Family</span></h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {plans.map((plan) => (
-            <div key={plan.id} className={`bg-[#231B3A]/80 rounded-2xl p-6 md:p-8 card-hover relative border ${plan.popular ? 'border-violet-500/40 shadow-xl shadow-violet-500/10 ring-1 ring-violet-500/30' : 'border-violet-500/10'}`}>
+          {plans.map((plan, i) => (
+            <div key={i} className={`bg-[#231B3A]/80 rounded-2xl p-6 md:p-8 card-hover relative border ${plan.popular ? 'border-violet-500/40 shadow-xl shadow-violet-500/10 ring-1 ring-violet-500/30' : 'border-violet-500/10'}`}>
               {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-violet-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR ⭐</div>}
               <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
-              <p className="text-sm text-gray-500 mb-4">{plan.description}</p>
+              <p className="text-sm text-gray-500 mb-4">{plan.desc}</p>
               <div className="mb-6"><span className="text-4xl font-[Fredoka_One] text-white">{plan.price}</span></div>
               <div className="space-y-3 mb-8">
-                {plan.features.filter(f => f.trim()).map((f, j) => (
+                {plan.features.map((f, j) => (
                   <div key={j} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" /><span className="text-sm text-gray-400">{f}</span></div>
                 ))}
               </div>
-              <a href={plan.ctaLink || '#register'} className={`block text-center bg-gradient-to-r ${plan.color} text-white py-3 rounded-full font-bold hover:shadow-lg transition-all`}>{plan.ctaText}</a>
+              <a href="#register" className={`block text-center bg-gradient-to-r ${plan.color} text-white py-3 rounded-full font-bold hover:shadow-lg transition-all`}>{plan.cta}</a>
             </div>
           ))}
         </div>
@@ -869,12 +1048,6 @@ function RegisterForm() {
     parentName: '', parentEmail: '', parentPhone: '', childName: '', childAge: '', course: '', ticketType: '', numChildren: '', consent: false, updates: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [courseOptions, setCourseOptions] = useState<CourseData[]>([]);
-
-  useEffect(() => {
-    seedDefaultCourses();
-    setCourseOptions(getCourses().filter(c => c.active));
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -955,9 +1128,14 @@ function RegisterForm() {
                 <label className="block text-sm font-bold text-gray-300 mb-2">Select Course *</label>
                 <select name="course" value={formData.course} onChange={handleChange} className={selectClass}>
                   <option value="">Choose a course</option>
-                  {courseOptions.map(c => (
-                    <option key={c.id} value={c.title}>{c.icon} {c.title} – {c.price}</option>
-                  ))}
+                  <option value="webdev">💻 Web Development for Kids</option>
+                  <option value="canva">🎨 Canva Design for Kids</option>
+                  <option value="french">🇫🇷 French Language for Kids</option>
+                  <option value="ai">🤖 AI & Machine Learning</option>
+                  <option value="scratch">🎮 Scratch Coding & Games</option>
+                  <option value="python">🐍 Python Programming</option>
+                  <option value="digitalart">🖌️ Digital Art & Illustration</option>
+                  <option value="maths">🧮 Maths & Problem Solving</option>
                 </select>
               </div>
               <div>
@@ -1034,9 +1212,7 @@ function ParentTrust() {
 }
 
 // ==================== FOOTER ====================
-function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
-  const settings = getSettings();
-
+function Footer() {
   return (
     <footer className="bg-[#080612] text-white pt-16 pb-8 border-t border-violet-500/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1044,35 +1220,16 @@ function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-violet-500/20"><Sparkles className="w-6 h-6 text-white" /></div>
-              <span className="text-xl font-[Fredoka_One]">{settings.siteName.split(' ')[0]}<span className="text-violet-400">{settings.siteName.split(' ').slice(1).join(' ')}</span></span>
+              <span className="text-xl font-[Fredoka_One]">Clap<span className="text-violet-400">Academy</span></span>
             </div>
-            <p className="text-gray-500 leading-relaxed">{settings.tagline}</p>
+            <p className="text-gray-500 leading-relaxed">Empowering the next generation with AI, coding, and digital creativity skills.</p>
           </div>
           <div>
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {[{ label: 'What We Offer', href: '#offer' }, { label: 'Courses', href: '#courses' }, { label: 'Pricing', href: '#pricing' }, { label: 'Safety', href: '#safety' }, { label: 'FAQ', href: '#faq' }, { label: 'Register', href: '#register' }].map((link) => (
+              {[{ label: 'What We Offer', href: '#offer' }, { label: 'Pricing', href: '#pricing' }, { label: 'Safety', href: '#safety' }, { label: 'FAQ', href: '#faq' }, { label: 'Register', href: '#register' }].map((link) => (
                 <a key={link.label} href={link.href} className="block text-gray-500 hover:text-violet-400 transition-colors">{link.label}</a>
               ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4">Contact Us</h4>
-            <div className="space-y-3 text-gray-500">
-              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-violet-400" /><a href={`mailto:${settings.contactEmail}`} className="hover:text-violet-400 transition-colors">{settings.contactEmail}</a></div>
-              <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-violet-400" /><a href={`tel:${settings.contactPhone}`} className="hover:text-violet-400 transition-colors">{settings.contactPhone}</a></div>
-              <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-green-400" /><a href={settings.whatsappLink || '#'} target="_blank" rel="noopener" className="hover:text-green-400 transition-colors">WhatsApp Us</a></div>
-            </div>
-            {(settings.socialFacebook || settings.socialInstagram || settings.socialTwitter) && (
-              <div className="mt-4 flex items-center gap-3">
-                {settings.socialFacebook && <a href={settings.socialFacebook} target="_blank" rel="noopener" className="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-white/10 transition-all text-sm">f</a>}
-                {settings.socialTwitter && <a href={settings.socialTwitter} target="_blank" rel="noopener" className="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-white/10 transition-all text-sm">𝕏</a>}
-                {settings.socialInstagram && <a href={settings.socialInstagram} target="_blank" rel="noopener" className="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-white/10 transition-all text-sm">IG</a>}
-                {settings.socialLinkedin && <a href={settings.socialLinkedin} target="_blank" rel="noopener" className="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-white/10 transition-all text-sm">in</a>}
-              </div>
-            )}
-            <div className="mt-4">
-              <a href="#register" className="inline-block bg-gradient-to-r from-violet-600 to-blue-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg transition-all">Register Now 🚀</a>
             </div>
           </div>
           <div>
@@ -1084,14 +1241,24 @@ function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
               <div className="flex items-center gap-2"><Wifi className="w-4 h-4 text-violet-400" /><span>Live & Interactive</span></div>
             </div>
           </div>
+          <div>
+            <h4 className="font-bold text-lg mb-4">Contact Us</h4>
+            <div className="space-y-3 text-gray-500">
+              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-violet-400" /><span>hello@clapacademy.co.uk</span></div>
+              <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-violet-400" /><span>+44 20 1234 5678</span></div>
+              <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-green-400" /><span>WhatsApp Us</span></div>
+            </div>
+            <div className="mt-6">
+              <a href="#register" className="inline-block bg-gradient-to-r from-violet-600 to-blue-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg transition-all">Register Now 🚀</a>
+            </div>
+          </div>
         </div>
         <div className="border-t border-violet-500/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} {settings.siteName}. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Clap Academy. All rights reserved.</p>
           <div className="flex items-center gap-6 text-gray-600 text-sm">
             <a href="#" className="hover:text-violet-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-violet-400 transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-violet-400 transition-colors">Safeguarding</a>
-            {onDocsClick && <button onClick={onDocsClick} className="hover:text-violet-400 transition-colors">Documentation</button>}
           </div>
         </div>
       </div>
@@ -1100,7 +1267,7 @@ function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
 }
 
 // ==================== MAIN LANDING PAGE ====================
-export default function LandingPage({ onAdminClick, onDocsClick }: { onAdminClick: () => void; onDocsClick?: () => void }) {
+export default function LandingPage({ onAdminClick }: { onAdminClick: () => void }) {
   return (
     <div className="min-h-screen bg-[#0F0A1E]">
       <Navbar onAdminClick={onAdminClick} />
@@ -1116,7 +1283,7 @@ export default function LandingPage({ onAdminClick, onDocsClick }: { onAdminClic
       <SafetyFirst />
       <FAQ />
       <RegisterForm />
-      <Footer onDocsClick={onDocsClick} />
+      <Footer />
     </div>
   );
 }

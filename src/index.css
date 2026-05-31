@@ -130,30 +130,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #4C3675;
 }
-
-/* Print styles for documentation PDF */
-@media print {
-  body {
-    background: white !important;
-    color: black !important;
-    font-size: 11pt;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  section, .bg-white {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-  pre {
-    white-space: pre-wrap;
-    word-break: break-all;
-    font-size: 9pt;
-  }
-  table {
-    font-size: 9pt;
-  }
-  a {
-    color: inherit !important;
-    text-decoration: none !important;
-  }
-}

@@ -5,15 +5,11 @@ import {
   UserPlus, BarChart3, Download, X, CheckCircle,
   AlertCircle, Filter, TrendingUp, Calendar,
   Menu as MenuIcon, Phone, Mail,
-  User, Shield, Baby as ChildIcon, BookOpen, Settings
+  User, Shield, Baby as ChildIcon
 } from 'lucide-react';
 import type { Registration } from './LandingPage';
-import CourseManager from './CourseManager';
-import PlanManager from './PlanManager';
-import SettingsManager from './SettingsManager';
-import { seedDefaultCourses } from '../utils/courses';
 
-type Tab = 'overview' | 'registrations' | 'courses' | 'plans' | 'settings' | 'analytics';
+type Tab = 'overview' | 'registrations' | 'analytics';
 
 // ==================== HELPER FUNCTIONS ====================
 function getRegistrations(): Registration[] {
@@ -769,7 +765,7 @@ function DeleteModal({ name, onConfirm, onCancel }: { name: string; onConfirm: (
 }
 
 // ==================== MAIN DASHBOARD ====================
-export default function DashboardPage({ onLogout, onDocs }: { onLogout: () => void; onDocs?: () => void }) {
+export default function DashboardPage({ onLogout }: { onLogout: () => void }) {
   const [activeTab, setActiveTab] = useState<Tab>('overview');
   const [registrations, setRegistrations] = useState<Registration[]>([]);
   const [viewReg, setViewReg] = useState<Registration | null>(null);
@@ -777,7 +773,6 @@ export default function DashboardPage({ onLogout, onDocs }: { onLogout: () => vo
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    seedDefaultCourses();
     setRegistrations(getRegistrations());
     const interval = setInterval(() => setRegistrations(getRegistrations()), 3000);
     return () => clearInterval(interval);
@@ -799,10 +794,7 @@ export default function DashboardPage({ onLogout, onDocs }: { onLogout: () => vo
   const tabs = [
     { id: 'overview' as Tab, label: 'Overview', icon: <LayoutDashboard className="w-5 h-5" /> },
     { id: 'registrations' as Tab, label: 'Registrations', icon: <UserPlus className="w-5 h-5" />, badge: registrations.length },
-    { id: 'courses' as Tab, label: 'Courses', icon: <BookOpen className="w-5 h-5" /> },
-    { id: 'plans' as Tab, label: 'Plans', icon: <DollarSign className="w-5 h-5" /> },
     { id: 'analytics' as Tab, label: 'Analytics', icon: <BarChart3 className="w-5 h-5" /> },
-    { id: 'settings' as Tab, label: 'Settings', icon: <Settings className="w-5 h-5" /> },
   ];
 
   return (
@@ -861,14 +853,6 @@ export default function DashboardPage({ onLogout, onDocs }: { onLogout: () => vo
                 <p className="text-[11px] text-gray-400">admin@clapacademy.co.uk</p>
               </div>
             </div>
-            {onDocs && (
-              <button
-                onClick={onDocs}
-                className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-400 hover:bg-gray-50 hover:text-gray-700 transition-colors mb-1"
-              >
-                <BookOpen className="w-4 h-4" /> Documentation
-              </button>
-            )}
             <button
               onClick={onLogout}
               className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-red-500 hover:bg-red-50 transition-colors"
@@ -899,10 +883,7 @@ export default function DashboardPage({ onLogout, onDocs }: { onLogout: () => vo
               <h1 className="text-lg md:text-xl font-bold text-gray-900">
                 {activeTab === 'overview' && '📊 Dashboard Overview'}
                 {activeTab === 'registrations' && '👥 All Registrations'}
-                {activeTab === 'courses' && '📚 Course Management'}
-                {activeTab === 'plans' && '💰 Plan Management'}
                 {activeTab === 'analytics' && '📈 Analytics & Reports'}
-                {activeTab === 'settings' && '⚙️ System Settings'}
               </h1>
               <p className="text-xs text-gray-400">
                 {new Date().toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
@@ -941,15 +922,6 @@ export default function DashboardPage({ onLogout, onDocs }: { onLogout: () => vo
               onView={setViewReg}
               onUpdateStatus={handleUpdateStatus}
             />
-          )}
-          {activeTab === 'courses' && (
-            <CourseManager />
-          )}
-          {activeTab === 'plans' && (
-            <PlanManager />
-          )}
-          {activeTab === 'settings' && (
-            <SettingsManager />
           )}
           {activeTab === 'analytics' && (
             <AnalyticsTab registrations={registrations} />
