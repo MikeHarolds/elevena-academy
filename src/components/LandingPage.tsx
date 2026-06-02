@@ -128,7 +128,7 @@ function Hero() {
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-violet-500/20">
               <Sparkles className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-bold text-violet-300">Online AI Camp for Kids Ages 5–16</span>
+              <span className="text-sm font-bold text-violet-300">Online Learning Camp for Kids Ages 5–16</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Fredoka_One] text-white leading-tight mb-6">
               Turn Your Child's
@@ -136,7 +136,7 @@ function Hero() {
               <span className="gradient-text-warm">Superpower! 🦸</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              A fun, safe 3-day online camp where kids learn to create with AI, build digital skills, and have a blast — all from home!
+              A fun, safe 6 Month - 1 year online camp where kids learn to create real live projects, build digital skills, and have a blast — all from home!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
