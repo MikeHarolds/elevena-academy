@@ -136,7 +136,7 @@ function Hero() {
               <span className="gradient-text-warm">Superpower! 🦸</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              A fun, safe 6 Month - 1 year online camp where kids learn to create real live projects, build digital skills, and have a blast — all from home!
+              A fun, structured online learning camp for ages 5–16 in French, Spanish, Web Dev, and Design
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
@@ -211,10 +211,10 @@ function Hero() {
 // ==================== WHAT WE OFFER ====================
 function WhatWeOffer() {
   const offers = [
-    { icon: <Bot className="w-8 h-8" />, title: 'AI Creation & Prompting', desc: 'Kids learn to create images, stories, and projects using AI tools — with fun, guided prompts.', color: 'from-violet-500 to-purple-600', bg: 'bg-violet-500/10', borderColor: 'border-violet-500/20' },
-    { icon: <Code className="w-8 h-8" />, title: 'Introduction to Web Development', desc: 'Children build their first web page and learn the basics of coding in a visual, engaging way.', color: 'from-blue-500 to-cyan-500', bg: 'bg-blue-500/10', borderColor: 'border-blue-500/20' },
-    { icon: <Brain className="w-8 h-8" />, title: 'Digital Literacy & Safety', desc: 'Understanding how AI works, staying safe online, and thinking critically about digital content.', color: 'from-emerald-500 to-green-500', bg: 'bg-emerald-500/10', borderColor: 'border-emerald-500/20' },
-    { icon: <Palette className="w-8 h-8" />, title: 'Creative AI Projects', desc: 'From AI art to chatbot design — hands-on projects that spark imagination and creativity.', color: 'from-pink-500 to-rose-500', bg: 'bg-pink-500/10', borderColor: 'border-pink-500/20' },
+    { icon: <Bot className="w-8 h-8" />, title: 'French & Spanish Language Learning', desc: 'Kids practise speaking, reading, and writing basic French and Spanish through games, songs, and interactive exercises — building confidence in a fun, age-appropriate way.', color: 'from-violet-500 to-purple-600', bg: 'bg-violet-500/10', borderColor: 'border-violet-500/20' },
+    { icon: <Code className="w-8 h-8" />, title: 'Introduction to Web Development', desc: 'Children create their first web page and learn the basics of coding using visual, hands-on exercises that make programming exciting and understandable.', color: 'from-blue-500 to-cyan-500', bg: 'bg-blue-500/10', borderColor: 'border-blue-500/20' },
+    { icon: <Brain className="w-8 h-8" />, title: 'Digital Literacy & Online Safety', desc: 'Children learn how to navigate the digital world safely, understanding responsible online behaviour and developing critical thinking around content.', color: 'from-emerald-500 to-green-500', bg: 'bg-emerald-500/10', borderColor: 'border-emerald-500/20' },
+    { icon: <Palette className="w-8 h-8" />, title: 'Showcase and Presentation', desc: 'Children share their language, coding, and design creations with parents, boosting confidence, communication, and pride in their achievements.', color: 'from-pink-500 to-rose-500', bg: 'bg-pink-500/10', borderColor: 'border-pink-500/20' },
     { icon: <Wand2 className="w-8 h-8" />, title: 'Problem Solving Skills', desc: 'Fun challenges and puzzles that develop computational thinking and logical reasoning.', color: 'from-amber-500 to-orange-500', bg: 'bg-amber-500/10', borderColor: 'border-amber-500/20' },
     { icon: <Presentation className="w-8 h-8" />, title: 'Showcase & Presentations', desc: 'Children present their creations to parents, building confidence and communication skills.', color: 'from-teal-500 to-cyan-500', bg: 'bg-teal-500/10', borderColor: 'border-teal-500/20' },
   ];
@@ -231,7 +231,7 @@ function WhatWeOffer() {
             <span className="gradient-text"> Future Skills</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Our 3-day online camp is designed to give your child a head start in AI, coding, and digital creativity — all while having incredible fun!
+            Our online camp is designed to give your child a head start in languages, Web Development, and digital creativity — all while having fun and staying engaged!
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -256,12 +256,12 @@ function WhatWeOffer() {
 // ==================== OUTCOME ====================
 function Outcome() {
   const outcomes = [
-    { emoji: '🎨', title: 'AI-generated artwork and creative projects' },
-    { emoji: '💻', title: 'A working web page they built themselves' },
-    { emoji: '🤖', title: 'Understanding of how AI tools work' },
-    { emoji: '🛡️', title: 'Knowledge of online safety and digital literacy' },
+    { emoji: '🗣️', title: 'Daily cartoon-style conversation bursts in French & Spanish.' },
+    { emoji: '🌐', title: 'Foundations of HTML, CSS, and showcasing projects online.' },
+    { emoji: '🎯', title: 'Mindful routines and project planning for ages 5–16.' },
+    { emoji: '🛡️', title: 'Poster briefs that stretch imagination and focus.' },
     { emoji: '🏆', title: 'Certificate of Completion and digital badges' },
-    { emoji: '🎤', title: 'Confidence to present their work to others' },
+    { emoji: '📣', title: 'Progress recaps, recordings, and certificates straight to you.' },
   ];
 
   return (
@@ -305,9 +305,9 @@ function Outcome() {
 // ==================== WHO IT'S FOR ====================
 function WhoItsFor() {
   const groups = [
-    { emoji: '🧒', title: 'Curious Kids Ages 5–7', desc: 'Fun, visual AI activities with lots of guidance. Perfect for little explorers!', color: 'border-pink-500/30 bg-pink-500/10' },
-    { emoji: '👦', title: 'Creative Minds Ages 8–11', desc: 'Hands-on projects, web building, and AI art creation. Their creativity will soar!', color: 'border-blue-500/30 bg-blue-500/10' },
-    { emoji: '🧑‍💻', title: 'Future Builders Ages 12–16', desc: 'Deeper AI prompting, coding basics, and digital projects. Skills for the future!', color: 'border-violet-500/30 bg-violet-500/10' },
+    { emoji: '🧒', title: 'Curious Kids Ages 5–7', desc: 'Fun, simple, and colourful activities in French, Spanish, basic digital creativity, shapes, colours, songs, and guided design tasks. Perfect for young learners who need gentle support.', color: 'border-pink-500/30 bg-pink-500/10' },
+    { emoji: '👦', title: 'Creative Minds Ages 8–11', desc: 'Interactive French and Spanish practice, beginner web page activities, creative graphics projects, and simple digital tasks that help children build confidence while learning.', color: 'border-blue-500/30 bg-blue-500/10' },
+    { emoji: '🧑‍💻', title: 'Future Builders Ages 12–16', desc: 'More focused learning in language communication, web development basics, design layouts, digital projects, and presentation skills. Ideal for children ready to build practical future skills.', color: 'border-violet-500/30 bg-violet-500/10' },
   ];
 
   return (
@@ -388,14 +388,14 @@ function ReserveSpot() {
 // ==================== ALL INCLUDED ====================
 function AllIncluded() {
   const bonuses = [
-    { num: 'BONUS 1', icon: <ShieldCheck className="w-7 h-7" />, title: 'AI Safety Guide for Parents', desc: 'Simple guidance to help your child use AI safely at home.', color: 'from-red-400 to-rose-500', bg: 'bg-red-500/10', border: 'border-red-500/20' },
-    { num: 'BONUS 2', icon: <Zap className="w-7 h-7" />, title: 'Kids Prompting Cheat Sheet', desc: 'Easy prompt examples children can use after the camp.', color: 'from-amber-400 to-yellow-500', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
-    { num: 'BONUS 3', icon: <BookOpen className="w-7 h-7" />, title: 'AI Creator Workbook', desc: 'A fun workbook for ideas, prompts and mini projects.', color: 'from-blue-400 to-cyan-500', bg: 'bg-blue-500/10', border: 'border-blue-500/20' },
-    { num: 'BONUS 4', icon: <Award className="w-7 h-7" />, title: 'Certificate of Completion', desc: 'A Clap Academy certificate to celebrate their achievement.', color: 'from-violet-400 to-purple-500', bg: 'bg-violet-500/10', border: 'border-violet-500/20' },
-    { num: 'BONUS 5', icon: <Star className="w-7 h-7" />, title: 'AI Creator Badge', desc: 'A fun badge recognising them as an AI Creator.', color: 'from-emerald-400 to-green-500', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
-    { num: 'BONUS 6', icon: <Users className="w-7 h-7" />, title: 'Parent Showcase Invitation', desc: 'Parents get to see what their child created.', color: 'from-pink-400 to-rose-500', bg: 'bg-pink-500/10', border: 'border-pink-500/20' },
-    { num: 'BONUS 7', icon: <Globe className="w-7 h-7" />, title: 'Kids Learning Hub Preview', desc: 'A preview pathway for families who want ongoing learning.', color: 'from-teal-400 to-cyan-500', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
-    { num: 'BONUS 8', icon: <Search className="w-7 h-7" />, title: 'AI Detective Guide', desc: 'Tips on spotting AI mistakes, fake facts and unsafe prompts.', color: 'from-indigo-400 to-blue-500', bg: 'bg-indigo-500/10', border: 'border-indigo-500/20' },
+    { num: 'BONUS 1', icon: <ShieldCheck className="w-7 h-7" />, title: 'Parent Guide to Online Learning', desc: 'Simple guidance to help parents support their child’s learning at home.', color: 'from-red-400 to-rose-500', bg: 'bg-red-500/10', border: 'border-red-500/20' },
+    { num: 'BONUS 2', icon: <Zap className="w-7 h-7" />, title: 'Language Practice Cheat Sheet', desc: 'Fun French and Spanish exercises, words, and phrases children can practise after the camp.', color: 'from-amber-400 to-yellow-500', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
+    { num: 'BONUS 3', icon: <BookOpen className="w-7 h-7" />, title: 'Web & Design Workbook', desc: 'A creative workbook with mini coding and design projects to reinforce skills learned during the camp.', color: 'from-blue-400 to-cyan-500', bg: 'bg-blue-500/10', border: 'border-blue-500/20' },
+    { num: 'BONUS 4', icon: <Award className="w-7 h-7" />, title: 'Certificate of Completion', desc: 'Elevena Academy certificate to celebrate their achievement.', color: 'from-violet-400 to-purple-500', bg: 'bg-violet-500/10', border: 'border-violet-500/20' },
+    { num: 'BONUS 5', icon: <Star className="w-7 h-7" />, title: 'AI Creator Badge', desc: 'Fun badges recognising your child’s accomplishments in web development and creative design.', color: 'from-emerald-400 to-green-500', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
+    { num: 'BONUS 6', icon: <Users className="w-7 h-7" />, title: 'Parent Showcase Invitation', desc: 'Parents are invited to view and celebrate what their child created during the camp.', color: 'from-pink-400 to-rose-500', bg: 'bg-pink-500/10', border: 'border-pink-500/20' },
+    { num: 'BONUS 7', icon: <Globe className="w-7 h-7" />, title: 'Kids Learning Hub Preview', desc: 'A preview of pathways for ongoing language, coding, and design learning after the camp.', color: 'from-teal-400 to-cyan-500', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
+    { num: 'BONUS 8', icon: <Search className="w-7 h-7" />, title: 'Digital Safety & Tips Guide', desc: 'Practical tips for children to stay safe online and use digital tools responsibly.', color: 'from-indigo-400 to-blue-500', bg: 'bg-indigo-500/10', border: 'border-indigo-500/20' },
   ];
 
   return (
@@ -804,7 +804,7 @@ function Courses() {
               Exciting Courses for <span className="gradient-text">Every Interest</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              From coding to languages, design to AI — choose the perfect course to spark your child's passion for learning.
+              From coding to languages — choose the perfect course to spark your child's passion for learning.
             </p>
           </div>
 
