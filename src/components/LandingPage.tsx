@@ -449,17 +449,17 @@ const coursesData: CourseData[] = [
     fullDesc: 'This hands-on course teaches children how to build real websites from scratch. Using beginner-friendly tools, kids will learn HTML to structure pages, CSS to style them beautifully, and basic JavaScript to add interactivity. By the end of the course, every child will have a live website they built themselves — a portfolio piece they can proudly share with family and friends.',
     image: '/images/course-webdev.png',
     age: 'Ages 7–16',
-    duration: '3 Days',
+    duration: '6 Months',
     sessions: '6 sessions (2hrs each)',
-    price: '£75',
+    price: '£30 Monthly',
     color: 'from-violet-500 to-blue-500',
     borderColor: 'border-violet-500/25',
     tag: '💻 Most Popular',
     highlights: ['Build a real website', 'Learn HTML, CSS & JS basics', 'No experience needed', 'Take home a live site'],
     curriculum: [
-      { day: 'Day 1', title: 'Getting Started with HTML', topics: ['What is a website?', 'Your first HTML page', 'Headings, paragraphs & images', 'Links and lists'] },
-      { day: 'Day 2', title: 'Styling with CSS', topics: ['Adding colours and fonts', 'Backgrounds and borders', 'Layout basics with flexbox', 'Making it look amazing'] },
-      { day: 'Day 3', title: 'Interactivity & Publishing', topics: ['Introduction to JavaScript', 'Adding buttons and alerts', 'Simple animations', 'Publishing your website live'] },
+      { day: 'Month 1-2', title: 'Getting Started with HTML', topics: ['What is a website?', 'Your first HTML page', 'Headings, paragraphs & images', 'Links and lists'] },
+      { day: 'Month 3-4', title: 'Styling with CSS', topics: ['Adding colours and fonts', 'Backgrounds and borders', 'Layout basics with flexbox', 'Making it look amazing'] },
+      { day: 'Month 5-6', title: 'Interactivity & Publishing', topics: ['Introduction to JavaScript', 'Adding buttons and alerts', 'Simple animations', 'Publishing your website live'] },
     ],
     outcomes: ['A published personal website', 'Understanding of web fundamentals', 'Confidence to continue coding', 'Certificate of completion'],
     requirements: ['A laptop or computer with internet', 'No prior coding experience needed', 'Curiosity and enthusiasm!'],
@@ -470,16 +470,16 @@ const coursesData: CourseData[] = [
     fullDesc: 'This creative course introduces children to the world of digital design using Canva — a fun, drag-and-drop design platform. Kids will learn about colours, typography, layout and composition while creating real projects like posters, greeting cards, presentation slides and social media graphics. Perfect for young artists who love to create and express themselves visually.',
     image: '/images/course-canva.png',
     age: 'Ages 6–14',
-    duration: '2 Days',
+    duration: '6 Months',
     sessions: '4 sessions (2hrs each)',
-    price: '£60',
+    price: '£30 Monthly',
     color: 'from-pink-500 to-rose-500',
     borderColor: 'border-pink-500/25',
     tag: '🎨 Creative',
     highlights: ['Create real design projects', 'Learn design principles', 'Use Canva confidently', 'Build a creative portfolio'],
     curriculum: [
-      { day: 'Day 1', title: 'Design Basics & Canva Fundamentals', topics: ['Introduction to Canva', 'Understanding colours and fonts', 'Working with shapes and images', 'Create your first poster'] },
-      { day: 'Day 2', title: 'Creative Projects & Portfolio', topics: ['Designing greeting cards', 'Creating presentation slides', 'Social media graphics', 'Building your design portfolio'] },
+      { day: 'Month 1-3', title: 'Design Basics & Canva Fundamentals', topics: ['Introduction to Canva', 'Understanding colours and fonts', 'Working with shapes and images', 'Create your first poster'] },
+      { day: 'Month 4-6', title: 'Creative Projects & Portfolio', topics: ['Designing greeting cards', 'Creating presentation slides', 'Social media graphics', 'Building your design portfolio'] },
     ],
     outcomes: ['A digital design portfolio', 'Understanding of design principles', 'Canva proficiency', 'Certificate of completion'],
     requirements: ['A laptop or tablet with internet', 'No design experience needed', 'A love for creativity!'],
@@ -490,18 +490,18 @@ const coursesData: CourseData[] = [
     fullDesc: 'Bonjour! This immersive French course makes language learning exciting for children. Through interactive games, songs, stories and role-play, kids will learn everyday French vocabulary and phrases. The course covers greetings, colours, numbers, animals, food, family members and basic conversation — all taught in a way that feels like play, not study.',
     image: '/images/course-french.png',
     age: 'Ages 5–12',
-    duration: '4 Days',
+    duration: '6 Months - 1 year',
     sessions: '8 sessions (1.5hrs each)',
-    price: '£80',
+    price: '£30 Monthly',
     color: 'from-blue-500 to-indigo-500',
     borderColor: 'border-blue-500/25',
     tag: '🇫🇷 Language',
     highlights: ['Learn French through play', 'Native speaker methods', 'Songs, games & stories', 'Everyday conversation skills'],
     curriculum: [
-      { day: 'Day 1', title: 'Bonjour! Greetings & Introductions', topics: ['Saying hello and goodbye', 'My name is… How are you?', 'Numbers 1–20', 'French songs and rhymes'] },
-      { day: 'Day 2', title: 'Colours, Animals & the World Around Us', topics: ['Colours in French', 'Animal names and sounds', 'Days of the week', 'Weather expressions'] },
-      { day: 'Day 3', title: 'Food, Family & Daily Life', topics: ['French food vocabulary', 'Family members', 'Likes and dislikes', 'Simple sentences'] },
-      { day: 'Day 4', title: 'Conversations & Celebration', topics: ['Ordering food in French', 'Asking and answering questions', 'Role-play activities', 'French culture & celebration'] },
+      { day: '1 - 3 Months', title: 'Bonjour! Greetings & Introductions', topics: ['Saying hello and goodbye', 'My name is… How are you?', 'Numbers 1–20', 'French songs and rhymes'] },
+      { day: '4 - 6 Months', title: 'Colours, Animals & the World Around Us', topics: ['Colours in French', 'Animal names and sounds', 'Days of the week', 'Weather expressions'] },
+      { day: '7 - 9 Months', title: 'Food, Family & Daily Life', topics: ['French food vocabulary', 'Family members', 'Likes and dislikes', 'Simple sentences'] },
+      { day: '10 - 12 Months', title: 'Conversations & Celebration', topics: ['Ordering food in French', 'Asking and answering questions', 'Role-play activities', 'French culture & celebration'] },
     ],
     outcomes: ['200+ French vocabulary words', 'Basic conversation ability', 'Cultural awareness', 'Certificate of completion'],
     requirements: ['A laptop or computer with internet', 'No French experience needed', 'A willingness to have fun!'],
@@ -512,17 +512,17 @@ const coursesData: CourseData[] = [
     fullDesc: 'This fascinating course demystifies Artificial Intelligence for young minds. Children will learn how AI works through fun, hands-on experiments — training machine learning models, creating AI-generated art, understanding how voice assistants work, and exploring the ethics of AI. The course balances technical understanding with creativity, giving kids a real head start in the technology shaping their future.',
     image: '/images/course-ai.png',
     age: 'Ages 8–16',
-    duration: '3 Days',
+    duration: '3 Months',
     sessions: '6 sessions (2hrs each)',
-    price: '£75',
+    price: '£30 Monthly',
     color: 'from-emerald-500 to-teal-500',
     borderColor: 'border-emerald-500/25',
     tag: '🤖 STEM',
     highlights: ['Train a real AI model', 'Create AI-generated art', 'Understand how AI thinks', 'Explore AI ethics & safety'],
     curriculum: [
-      { day: 'Day 1', title: 'What is AI? How Machines Learn', topics: ['What is Artificial Intelligence?', 'How machines learn from data', 'Training vs inference', 'AI in everyday life'] },
-      { day: 'Day 2', title: 'Hands-On AI Experiments', topics: ['Training an image classifier', 'Creating AI-generated art', 'Natural language processing', 'Building a simple chatbot'] },
-      { day: 'Day 3', title: 'AI Safety & Future Skills', topics: ['Spotting AI mistakes', 'Deepfakes and misinformation', 'AI ethics for kids', 'Your future with AI'] },
+      { day: 'Month 1', title: 'What is AI? How Machines Learn', topics: ['What is Artificial Intelligence?', 'How machines learn from data', 'Training vs inference', 'AI in everyday life'] },
+      { day: 'Month 2', title: 'Hands-On AI Experiments', topics: ['Training an image classifier', 'Creating AI-generated art', 'Natural language processing', 'Building a simple chatbot'] },
+      { day: 'Month 3', title: 'AI Safety & Future Skills', topics: ['Spotting AI mistakes', 'Deepfakes and misinformation', 'AI ethics for kids', 'Your future with AI'] },
     ],
     outcomes: ['Understanding of AI fundamentals', 'Hands-on ML experience', 'AI safety awareness', 'Certificate of completion'],
     requirements: ['A laptop or computer with internet', 'No AI experience needed', 'Curiosity about technology!'],
@@ -533,17 +533,17 @@ const coursesData: CourseData[] = [
     fullDesc: 'Scratch is the world\'s most popular coding platform for kids, and this course teaches children how to use it to create their own games, animations and interactive stories. Using colourful drag-and-drop code blocks, kids learn programming concepts like loops, conditions, variables and events — all while having a blast building projects they can share with friends and family.',
     image: '/images/course-scratch.png',
     age: 'Ages 5–12',
-    duration: '3 Days',
+    duration: '6 Months',
     sessions: '6 sessions (2hrs each)',
-    price: '£60',
+    price: '£30 Monthly',
     color: 'from-amber-500 to-orange-500',
     borderColor: 'border-amber-500/25',
     tag: '🎮 Fun',
     highlights: ['Build your own games', 'Visual drag-and-drop coding', 'No reading required', 'Share projects online'],
     curriculum: [
-      { day: 'Day 1', title: 'Your First Scratch Project', topics: ['Introduction to Scratch', 'Sprites, backdrops and sounds', 'Moving and animating characters', 'Create a simple animation'] },
-      { day: 'Day 2', title: 'Building Interactive Games', topics: ['Loops and conditions', 'Scoring and variables', 'Collision detection', 'Build a catching game'] },
-      { day: 'Day 3', title: 'Advanced Projects & Sharing', topics: ['Creating a platformer game', 'Adding levels and power-ups', 'Sharing your project online', 'Game design showcase'] },
+      { day: 'Month 1', title: 'Your First Scratch Project', topics: ['Introduction to Scratch', 'Sprites, backdrops and sounds', 'Moving and animating characters', 'Create a simple animation'] },
+      { day: 'Month 2', title: 'Building Interactive Games', topics: ['Loops and conditions', 'Scoring and variables', 'Collision detection', 'Build a catching game'] },
+      { day: 'Month 3', title: 'Advanced Projects & Sharing', topics: ['Creating a platformer game', 'Adding levels and power-ups', 'Sharing your project online', 'Game design showcase'] },
     ],
     outcomes: ['2-3 completed games', 'Understanding of coding logic', 'Problem-solving skills', 'Certificate of completion'],
     requirements: ['A laptop or computer with internet', 'No coding experience needed', 'Imagination and creativity!'],
@@ -554,18 +554,18 @@ const coursesData: CourseData[] = [
     fullDesc: 'Python is one of the world\'s most popular programming languages, and this course makes it accessible for young learners. Children will write real Python code from day one — solving puzzles, building calculators, creating text-based games and automating simple tasks. The course emphasises logical thinking and problem-solving while keeping things fun and achievable for young coders.',
     image: '/images/course-python.png',
     age: 'Ages 9–16',
-    duration: '4 Days',
+    duration: '6 Months',
     sessions: '8 sessions (2hrs each)',
-    price: '£80',
+    price: '£30 Monthly',
     color: 'from-green-500 to-emerald-500',
     borderColor: 'border-green-500/25',
     tag: '🐍 Coding',
     highlights: ['Write real Python code', 'Build mini projects', 'Learn programming logic', 'Industry-standard language'],
     curriculum: [
-      { day: 'Day 1', title: 'Python Basics & First Programs', topics: ['What is Python?', 'Variables and data types', 'Print statements and input', 'Build a simple calculator'] },
-      { day: 'Day 2', title: 'Logic & Decision Making', topics: ['If/else statements', 'Loops (for and while)', 'Building a number guessing game', 'Creating patterns with code'] },
-      { day: 'Day 3', title: 'Functions & Data Structures', topics: ['Writing functions', 'Lists and dictionaries', 'Working with text', 'Build a quiz program'] },
-      { day: 'Day 4', title: 'Final Project & Beyond', topics: ['Text-based adventure game', 'Turtle graphics art', 'Debugging techniques', 'Next steps in Python'] },
+      { day: 'Month 1-2', title: 'Python Basics & First Programs', topics: ['What is Python?', 'Variables and data types', 'Print statements and input', 'Build a simple calculator'] },
+      { day: 'Month 3-4', title: 'Logic & Decision Making', topics: ['If/else statements', 'Loops (for and while)', 'Building a number guessing game', 'Creating patterns with code'] },
+      { day: 'Month 5', title: 'Functions & Data Structures', topics: ['Writing functions', 'Lists and dictionaries', 'Working with text', 'Build a quiz program'] },
+      { day: 'Month 6', title: 'Final Project & Beyond', topics: ['Text-based adventure game', 'Turtle graphics art', 'Debugging techniques', 'Next steps in Python'] },
     ],
     outcomes: ['Multiple Python projects', 'Core programming concepts', 'Logical thinking skills', 'Certificate of completion'],
     requirements: ['A laptop or computer with internet', 'Basic keyboard skills', 'No Python experience needed'],
@@ -579,7 +579,7 @@ const coursesData: CourseData[] = [
     age: 'Ages 6–14',
     duration: '6 Months - 1 Year',
     sessions: '4 sessions (2hrs each)',
-    price: '£60',
+    price: '£30 Monthly',
     color: 'from-fuchsia-500 to-pink-500',
     borderColor: 'border-fuchsia-500/25',
     tag: ' Language',
@@ -594,29 +594,29 @@ const coursesData: CourseData[] = [
     outcomes: ['200+ Spanish vocabulary words', 'Basic conversation ability', 'Cultural awareness', 'Certificate of completion'],
     requirements: ['A laptop or tablet with internet', 'No Spanish experience needed', 'A willingness to have fun!'],
   },
-  {
-    title: 'Maths & Problem Solving',
-    desc: 'Interactive maths challenges and logic puzzles that make numbers exciting — building confidence and critical thinking skills.',
-    fullDesc: 'This course transforms maths from a subject into an adventure! Through interactive puzzles, logic challenges, pattern recognition and real-world problem solving, children develop a love for numbers. The course adapts to different age groups — younger children focus on number sense and patterns, while older children tackle logic puzzles, basic algebra concepts and mathematical thinking strategies.',
-    image: null,
-    icon: '🧮',
-    age: 'Ages 5–14',
-    duration: '3 Days',
-    sessions: '6 sessions (1.5hrs each)',
-    price: '£60',
-    color: 'from-cyan-500 to-blue-500',
-    borderColor: 'border-cyan-500/25',
-    tag: '🧠 Logic',
-    gradientBg: true,
-    highlights: ['Make maths fun', 'Logic puzzles & challenges', 'Build number confidence', 'Critical thinking skills'],
-    curriculum: [
-      { day: 'Day 1', title: 'Numbers & Patterns Adventure', topics: ['Fun with numbers', 'Pattern recognition', 'Number puzzles and tricks', 'Mental maths strategies'] },
-      { day: 'Day 2', title: 'Logic & Problem Solving', topics: ['Logic puzzles and riddles', 'Word problem strategies', 'Spatial reasoning challenges', 'Working backwards technique'] },
-      { day: 'Day 3', title: 'Maths Games & Brain Teasers', topics: ['Maths-based board games', 'Strategy and probability', 'Real-world maths challenges', 'Maths competition style questions'] },
-    ],
-    outcomes: ['Improved number confidence', 'Problem-solving strategies', 'Logical thinking skills', 'Certificate of completion'],
-    requirements: ['A laptop or computer with internet', 'No advanced maths needed', 'A curious mind!'],
-  },
+  // {
+  //   title: 'Maths & Problem Solving',
+  //   desc: 'Interactive maths challenges and logic puzzles that make numbers exciting — building confidence and critical thinking skills.',
+  //   fullDesc: 'This course transforms maths from a subject into an adventure! Through interactive puzzles, logic challenges, pattern recognition and real-world problem solving, children develop a love for numbers. The course adapts to different age groups — younger children focus on number sense and patterns, while older children tackle logic puzzles, basic algebra concepts and mathematical thinking strategies.',
+  //   image: null,
+  //   icon: '🧮',
+  //   age: 'Ages 5–14',
+  //   duration: '3 Days',
+  //   sessions: '6 sessions (1.5hrs each)',
+  //   price: '£60',
+  //   color: 'from-cyan-500 to-blue-500',
+  //   borderColor: 'border-cyan-500/25',
+  //   tag: '🧠 Logic',
+  //   gradientBg: true,
+  //   highlights: ['Make maths fun', 'Logic puzzles & challenges', 'Build number confidence', 'Critical thinking skills'],
+  //   curriculum: [
+  //     { day: 'Day 1', title: 'Numbers & Patterns Adventure', topics: ['Fun with numbers', 'Pattern recognition', 'Number puzzles and tricks', 'Mental maths strategies'] },
+  //     { day: 'Day 2', title: 'Logic & Problem Solving', topics: ['Logic puzzles and riddles', 'Word problem strategies', 'Spatial reasoning challenges', 'Working backwards technique'] },
+  //     { day: 'Day 3', title: 'Maths Games & Brain Teasers', topics: ['Maths-based board games', 'Strategy and probability', 'Real-world maths challenges', 'Maths competition style questions'] },
+  //   ],
+  //   outcomes: ['Improved number confidence', 'Problem-solving strategies', 'Logical thinking skills', 'Certificate of completion'],
+  //   requirements: ['A laptop or computer with internet', 'No advanced maths needed', 'A curious mind!'],
+  // },
 ];
 
 // ==================== COURSE DETAIL MODAL ====================
@@ -1057,123 +1057,123 @@ function RegisterForm() {
   const inputClass = "w-full pl-12 pr-4 py-3.5 rounded-xl border border-violet-500/20 bg-[#1A1230] text-white placeholder-gray-500 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 outline-none transition-all";
   const selectClass = "w-full px-4 py-3.5 rounded-xl border border-violet-500/20 bg-[#1A1230] text-white focus:ring-2 focus:ring-violet-500 focus:border-violet-500 outline-none transition-all";
 
-  return (
-    <section id="register" className="py-16 md:py-24 section-dark relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-violet-600/5 rounded-full blur-3xl" />
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <span className="inline-block bg-violet-500/10 text-violet-400 px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-violet-500/20">📝 Registration</span>
-          <h2 className="text-3xl md:text-5xl font-[Fredoka_One] text-white mb-4">Reserve Your Child's <span className="gradient-text">Spot</span></h2>
-          <p className="text-gray-400 text-lg">Limited places. Beginner-friendly. Parent-aware.</p>
-        </div>
+  // return (
+  //   <section id="register" className="py-16 md:py-24 section-dark relative overflow-hidden">
+  //     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-violet-600/5 rounded-full blur-3xl" />
+  //     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  //       <div className="text-center mb-12">
+  //         <span className="inline-block bg-violet-500/10 text-violet-400 px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-violet-500/20">📝 Registration</span>
+  //         <h2 className="text-3xl md:text-5xl font-[Fredoka_One] text-white mb-4">Reserve Your Child's <span className="gradient-text">Spot</span></h2>
+  //         <p className="text-gray-400 text-lg">Limited places. Beginner-friendly. Parent-aware.</p>
+  //       </div>
 
-        {submitted ? (
-          <div className="bg-[#231B3A] rounded-3xl shadow-xl p-8 md:p-12 text-center border border-emerald-500/30">
-            <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-emerald-400" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-3">Registration Successful! 🎉</h3>
-            <p className="text-gray-400 mb-6">Thank you for registering your child. We'll send a confirmation email with all the details.</p>
-            <button onClick={() => setSubmitted(false)} className="bg-gradient-to-r from-violet-600 to-blue-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all">Register Another Child</button>
-          </div>
-        ) : (
-          <div className="bg-[#231B3A]/80 rounded-3xl shadow-xl p-6 md:p-10 border border-violet-500/15 backdrop-blur-sm">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="md:col-span-2">
-                <label className="block text-sm font-bold text-gray-300 mb-2">Parent / Guardian Full Name *</label>
-                <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-                  <input type="text" name="parentName" value={formData.parentName} onChange={handleChange} placeholder="Enter your full name" className={inputClass} />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Parent / Guardian Email *</label>
-                <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-                  <input type="email" name="parentEmail" value={formData.parentEmail} onChange={handleChange} placeholder="your@email.com" className={inputClass} />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Parent / Guardian Phone *</label>
-                <div className="relative">
-                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-                  <input type="tel" name="parentPhone" value={formData.parentPhone} onChange={handleChange} placeholder="Your phone number" className={inputClass} />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Child First Name *</label>
-                <div className="relative">
-                  <Sparkles className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-                  <input type="text" name="childName" value={formData.childName} onChange={handleChange} placeholder="Child's first name" className={inputClass} />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Child Age *</label>
-                <select name="childAge" value={formData.childAge} onChange={handleChange} className={selectClass}>
-                  <option value="">Select age</option>
-                  {Array.from({ length: 12 }, (_, i) => i + 5).map(age => <option key={age} value={age}>{age} years</option>)}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Select Course *</label>
-                <select name="course" value={formData.course} onChange={handleChange} className={selectClass}>
-                  <option value="">Choose a course</option>
-                  <option value="webdev">💻 Web Development for Kids</option>
-                  <option value="canva">🎨 Canva Design for Kids</option>
-                  <option value="french">🇫🇷 French Language for Kids</option>
-                  <option value="ai">🤖 AI & Machine Learning</option>
-                  <option value="scratch">🎮 Scratch Coding & Games</option>
-                  <option value="python">🐍 Python Programming</option>
-                  <option value="digitalart">🖌️ Digital Art & Illustration</option>
-                  <option value="maths">🧮 Maths & Problem Solving</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Ticket Type *</label>
-                <select name="ticketType" value={formData.ticketType} onChange={handleChange} className={selectClass}>
-                  <option value="">Choose ticket</option>
-                  <option value="early">Early Bird – £60</option>
-                  <option value="standard">Standard Child Ticket – £75</option>
-                  <option value="sibling">Sibling Ticket – £60</option>
-                  <option value="family">Family Bundle – £150</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Number of Children *</label>
-                <select name="numChildren" value={formData.numChildren} onChange={handleChange} className={selectClass}>
-                  <option value="">Select number</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-              <div className="md:col-span-2 space-y-3 mt-2">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" name="consent" checked={formData.consent} onChange={handleCheckbox} className="mt-1 w-5 h-5 rounded border-gray-600 bg-[#1A1230] text-violet-600 focus:ring-violet-500" />
-                  <span className="text-sm text-gray-400">I confirm I am the parent/guardian and consent to my child attending this online camp. *</span>
-                </label>
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" name="updates" checked={formData.updates} onChange={handleCheckbox} className="mt-1 w-5 h-5 rounded border-gray-600 bg-[#1A1230] text-violet-600 focus:ring-violet-500" />
-                  <span className="text-sm text-gray-400">I agree to receive updates from Clap Academy.</span>
-                </label>
-              </div>
-            </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button onClick={handleSubmit} className="flex-1 bg-gradient-to-r from-violet-600 to-blue-500 text-white py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-violet-500/30 transition-all flex items-center justify-center gap-2">
-                <GraduationCap className="w-5 h-5" /> Complete Registration
-              </button>
-              <button onClick={handleSubmit} className="flex-1 bg-gradient-to-r from-emerald-500 to-green-500 text-white py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-2">
-                <DollarSign className="w-5 h-5" /> Pay Now
-              </button>
-            </div>
-            <div className="mt-4 text-center">
-              <a href="https://wa.me/" className="inline-flex items-center gap-2 text-green-400 font-bold hover:text-green-300 transition-colors"><Phone className="w-5 h-5" />WhatsApp Us</a>
-            </div>
-          </div>
-        )}
-      </div>
-    </section>
-  );
+  //       {submitted ? (
+  //         <div className="bg-[#231B3A] rounded-3xl shadow-xl p-8 md:p-12 text-center border border-emerald-500/30">
+  //           <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+  //             <CheckCircle className="w-10 h-10 text-emerald-400" />
+  //           </div>
+  //           <h3 className="text-2xl font-bold text-white mb-3">Registration Successful! 🎉</h3>
+  //           <p className="text-gray-400 mb-6">Thank you for registering your child. We'll send a confirmation email with all the details.</p>
+  //           <button onClick={() => setSubmitted(false)} className="bg-gradient-to-r from-violet-600 to-blue-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all">Register Another Child</button>
+  //         </div>
+  //       ) : (
+  //         <div className="bg-[#231B3A]/80 rounded-3xl shadow-xl p-6 md:p-10 border border-violet-500/15 backdrop-blur-sm">
+  //           <div className="grid md:grid-cols-2 gap-6">
+  //             <div className="md:col-span-2">
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Parent / Guardian Full Name *</label>
+  //               <div className="relative">
+  //                 <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+  //                 <input type="text" name="parentName" value={formData.parentName} onChange={handleChange} placeholder="Enter your full name" className={inputClass} />
+  //               </div>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Parent / Guardian Email *</label>
+  //               <div className="relative">
+  //                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+  //                 <input type="email" name="parentEmail" value={formData.parentEmail} onChange={handleChange} placeholder="your@email.com" className={inputClass} />
+  //               </div>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Parent / Guardian Phone *</label>
+  //               <div className="relative">
+  //                 <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+  //                 <input type="tel" name="parentPhone" value={formData.parentPhone} onChange={handleChange} placeholder="Your phone number" className={inputClass} />
+  //               </div>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Child First Name *</label>
+  //               <div className="relative">
+  //                 <Sparkles className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+  //                 <input type="text" name="childName" value={formData.childName} onChange={handleChange} placeholder="Child's first name" className={inputClass} />
+  //               </div>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Child Age *</label>
+  //               <select name="childAge" value={formData.childAge} onChange={handleChange} className={selectClass}>
+  //                 <option value="">Select age</option>
+  //                 {Array.from({ length: 12 }, (_, i) => i + 5).map(age => <option key={age} value={age}>{age} years</option>)}
+  //               </select>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Select Course *</label>
+  //               <select name="course" value={formData.course} onChange={handleChange} className={selectClass}>
+  //                 <option value="">Choose a course</option>
+  //                 <option value="webdev">💻 Web Development for Kids</option>
+  //                 <option value="canva">🎨 Canva Design for Kids</option>
+  //                 <option value="french">🇫🇷 French Language for Kids</option>
+  //                 <option value="ai">🤖 AI & Machine Learning</option>
+  //                 <option value="scratch">🎮 Scratch Coding & Games</option>
+  //                 <option value="python">🐍 Python Programming</option>
+  //                 <option value="digitalart">🖌️ Digital Art & Illustration</option>
+  //                 <option value="maths">🧮 Maths & Problem Solving</option>
+  //               </select>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Ticket Type *</label>
+  //               <select name="ticketType" value={formData.ticketType} onChange={handleChange} className={selectClass}>
+  //                 <option value="">Choose ticket</option>
+  //                 <option value="early">Early Bird – £60</option>
+  //                 <option value="standard">Standard Child Ticket – £75</option>
+  //                 <option value="sibling">Sibling Ticket – £60</option>
+  //                 <option value="family">Family Bundle – £150</option>
+  //               </select>
+  //             </div>
+  //             <div>
+  //               <label className="block text-sm font-bold text-gray-300 mb-2">Number of Children *</label>
+  //               <select name="numChildren" value={formData.numChildren} onChange={handleChange} className={selectClass}>
+  //                 <option value="">Select number</option>
+  //                 <option value="1">1</option>
+  //                 <option value="2">2</option>
+  //                 <option value="3">3</option>
+  //               </select>
+  //             </div>
+  //             <div className="md:col-span-2 space-y-3 mt-2">
+  //               <label className="flex items-start gap-3 cursor-pointer">
+  //                 <input type="checkbox" name="consent" checked={formData.consent} onChange={handleCheckbox} className="mt-1 w-5 h-5 rounded border-gray-600 bg-[#1A1230] text-violet-600 focus:ring-violet-500" />
+  //                 <span className="text-sm text-gray-400">I confirm I am the parent/guardian and consent to my child attending this online camp. *</span>
+  //               </label>
+  //               <label className="flex items-start gap-3 cursor-pointer">
+  //                 <input type="checkbox" name="updates" checked={formData.updates} onChange={handleCheckbox} className="mt-1 w-5 h-5 rounded border-gray-600 bg-[#1A1230] text-violet-600 focus:ring-violet-500" />
+  //                 <span className="text-sm text-gray-400">I agree to receive updates from Clap Academy.</span>
+  //               </label>
+  //             </div>
+  //           </div>
+  //           <div className="mt-8 flex flex-col sm:flex-row gap-4">
+  //             <button onClick={handleSubmit} className="flex-1 bg-gradient-to-r from-violet-600 to-blue-500 text-white py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-violet-500/30 transition-all flex items-center justify-center gap-2">
+  //               <GraduationCap className="w-5 h-5" /> Complete Registration
+  //             </button>
+  //             <button onClick={handleSubmit} className="flex-1 bg-gradient-to-r from-emerald-500 to-green-500 text-white py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-2">
+  //               <DollarSign className="w-5 h-5" /> Pay Now
+  //             </button>
+  //           </div>
+  //           <div className="mt-4 text-center">
+  //             <a href="https://wa.me/" className="inline-flex items-center gap-2 text-green-400 font-bold hover:text-green-300 transition-colors"><Phone className="w-5 h-5" />WhatsApp Us</a>
+  //           </div>
+  //         </div>
+  //       )}
+  //     </div>
+  //   </section>
+  // );
 }
 
 // ==================== PARENT TRUST ====================
