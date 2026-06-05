@@ -2,10 +2,17 @@ import { useState, useEffect } from 'react';
 import LandingPage from './components/LandingPage';
 import LoginPage from './components/LoginPage';
 import DashboardPage from './components/DashboardPage';
+import WhatsAppButton from './components/WhatsAppButton';
 
 type Page = 'home' | 'login' | 'dashboard';
 
 export default function App() {
+
+  
+      {/* Your application */}
+      <WhatsAppButton />
+    
+
   const [currentPage, setCurrentPage] = useState<Page>(() => {
     // Check if admin is already logged in
     if (localStorage.getItem('clap_admin_auth') === 'true') {

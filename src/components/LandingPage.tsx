@@ -38,6 +38,8 @@ export function saveRegistration(reg: Omit<Registration, 'id' | 'registeredAt' |
   return newReg;
 }
 
+
+
 // ==================== NAVBAR ====================
 function Navbar({ onAdminClick }: { onAdminClick: () => void }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +50,7 @@ function Navbar({ onAdminClick }: { onAdminClick: () => void }) {
     { label: 'Pricing', href: '#pricing' },
     { label: 'Safety', href: '#safety' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Register', href: '#register' },
+    { label: 'Register', href: 'https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00' },
   ];
 
   return (
@@ -101,7 +103,7 @@ function Navbar({ onAdminClick }: { onAdminClick: () => void }) {
               Admin Login
             </button>
             <a
-              href="#register"
+              href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00"
               className="block text-center bg-gradient-to-r from-violet-600 to-blue-500 text-white px-5 py-2.5 rounded-full font-bold text-sm mt-2"
               onClick={() => setIsOpen(false)}
             >
@@ -140,7 +142,7 @@ function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="#register"
+                href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-violet-500/30 transition-all animate-pulse-glow"
               >
                 <Rocket className="w-5 h-5" />
@@ -876,7 +878,7 @@ function Courses() {
           {/* Bottom CTA */}
           <div className="text-center mt-12">
             <a
-              href="#register"
+              href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-violet-500/30 transition-all"
             >
               <GraduationCap className="w-5 h-5" />
@@ -922,7 +924,7 @@ function Pricing() {
                   <div key={j} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" /><span className="text-sm text-gray-400">{f}</span></div>
                 ))}
               </div>
-              <a href="#register" className={`block text-center bg-gradient-to-r ${plan.color} text-white py-3 rounded-full font-bold hover:shadow-lg transition-all`}>{plan.cta}</a>
+              <a href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00" className={`block text-center bg-gradient-to-r ${plan.color} text-white py-3 rounded-full font-bold hover:shadow-lg transition-all`}>{plan.cta}</a>
             </div>
           ))}
         </div>
@@ -1201,6 +1203,8 @@ function ParentTrust() {
   );
 }
 
+
+
 // ==================== FOOTER ====================
 function Footer() {
   return (
@@ -1217,7 +1221,7 @@ function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {[{ label: 'What We Offer', href: '#offer' }, { label: 'Pricing', href: '#pricing' }, { label: 'Safety', href: '#safety' }, { label: 'FAQ', href: '#faq' }, { label: 'Register', href: '#register' }].map((link) => (
+              {[{ label: 'What We Offer', href: '#offer' }, { label: 'Pricing', href: '#pricing' }, { label: 'Safety', href: '#safety' }, { label: 'FAQ', href: '#faq' }, { label: 'Register', href: 'https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00' }].map((link) => (
                 <a key={link.label} href={link.href} className="block text-gray-500 hover:text-violet-400 transition-colors">{link.label}</a>
               ))}
             </div>
@@ -1239,7 +1243,7 @@ function Footer() {
               <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-green-400" /><span>WhatsApp Us</span></div>
             </div>
             <div className="mt-6">
-              <a href="#register" className="inline-block bg-gradient-to-r from-violet-600 to-blue-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg transition-all">Register Now 🚀</a>
+              <a href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00" className="inline-block bg-gradient-to-r from-violet-600 to-blue-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg transition-all">Register Now 🚀</a>
             </div>
           </div>
         </div>
