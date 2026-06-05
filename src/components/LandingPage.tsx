@@ -26,7 +26,7 @@ export interface Registration {
 }
 
 export function saveRegistration(reg: Omit<Registration, 'id' | 'registeredAt' | 'status'>) {
-  const registrations: Registration[] = JSON.parse(localStorage.getItem('clap_registrations') || '[]');
+  const registrations: Registration[] = JSON.parse(localStorage.getItem('Elevena_registrations') || '[]');
   const newReg: Registration = {
     ...reg,
     id: `REG-${Date.now()}-${Math.random().toString(36).substring(2, 7).toUpperCase()}`,
@@ -34,7 +34,7 @@ export function saveRegistration(reg: Omit<Registration, 'id' | 'registeredAt' |
     status: 'pending',
   };
   registrations.push(newReg);
-  localStorage.setItem('clap_registrations', JSON.stringify(registrations));
+  localStorage.setItem('Elevena_registrations', JSON.stringify(registrations));
   return newReg;
 }
 
@@ -286,7 +286,7 @@ function Outcome() {
           <div>
             <span className="inline-block bg-emerald-500/10 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-emerald-500/20">🎯 Learning Outcomes</span>
             <h2 className="text-3xl md:text-4xl font-[Fredoka_One] text-white mb-6">What Your Child Will <span className="gradient-text">Take Away</span></h2>
-            <p className="text-gray-400 text-lg mb-8">After 3 days of fun-filled learning, your child will walk away with real digital skills and creative confidence.</p>
+            <p className="text-gray-400 text-lg mb-8">After 6 Months - 1 Year of fun-filled learning, your child will walk away with real digital skills and creative confidence.</p>
             <div className="space-y-4">
               {outcomes.map((item, i) => (
                 <div key={i} className="flex items-start gap-4 bg-[#231B3A]/80 rounded-xl p-4 border border-violet-500/10 card-hover">
@@ -601,7 +601,7 @@ const coursesData: CourseData[] = [
   //   image: null,
   //   icon: '🧮',
   //   age: 'Ages 5–14',
-  //   duration: '3 Days',
+  //   duration: '6 Months - 1 Year',
   //   sessions: '6 sessions (1.5hrs each)',
   //   price: '£60',
   //   color: 'from-cyan-500 to-blue-500',
@@ -897,10 +897,10 @@ function Courses() {
 // ==================== PRICING ====================
 function Pricing() {
   const plans = [
-    { name: 'Early Bird', price: '£60', desc: 'Limited places', features: ['Full 3-day camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite'], cta: 'Secure Early Bird Place', color: 'from-amber-400 to-orange-500', popular: false },
-    { name: 'Standard Child Ticket', price: '£75', desc: 'Full 3-day online camp access', features: ['Full 3-day camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite', 'Priority support'], cta: 'Register Your Child', color: 'from-violet-500 to-blue-500', popular: true },
-    { name: 'Sibling Ticket', price: '£60', desc: 'For additional children', features: ['Full 3-day camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite'], cta: 'Book Sibling Place', color: 'from-emerald-400 to-green-500', popular: false },
-    { name: 'Family Bundle', price: '£150', desc: 'Up to 3 children', features: ['Full 3-day camp for 3 kids', 'All 8 bonuses per child', 'Certificates & badges', 'Parent showcase invite', 'Best value for families'], cta: 'Choose Family Bundle', color: 'from-pink-400 to-rose-500', popular: false },
+    { name: 'Early Bird', price: '£60', desc: 'Limited places', features: ['Full 6 Months - 1 Year class access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite'], cta: 'Secure Early Bird Place', color: 'from-amber-400 to-orange-500', popular: false },
+    { name: 'Standard Child Ticket', price: '£75', desc: 'Full 6 Months - 1 Year online class access', features: ['Full 6 Months - 1 Year camp access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite', 'Priority support'], cta: 'Register Your Child', color: 'from-violet-500 to-blue-500', popular: true },
+    { name: 'Sibling Ticket', price: '£60', desc: 'For additional children', features: ['Full 6 Months - 1 Year class access', 'All 8 bonuses included', 'Certificate & badge', 'Parent showcase invite'], cta: 'Book Sibling Place', color: 'from-emerald-400 to-green-500', popular: false },
+    { name: 'Family Bundle', price: '£150', desc: 'Up to 3 children', features: ['Full 6 Months - 1 Year class for 3 kids', 'All 8 bonuses per child', 'Certificates & badges', 'Parent showcase invite', 'Best value for families'], cta: 'Choose Family Bundle', color: 'from-pink-400 to-rose-500', popular: false },
   ];
 
   return (
@@ -1003,9 +1003,9 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 function FAQ() {
   const faqs = [
-    { q: 'What is AI Creator Camp for Kids Online?', a: 'It\'s a fun, structured 3-day online camp where children aged 5-16 learn about AI, create digital projects, build web pages, and develop future-ready skills — all from the comfort of home.' },
+    { q: 'What is AI Creator Camp for Kids Online?', a: 'It\'s a fun, structured 6 Months - 1 Year online camp where children aged 5-16 learn about AI, create digital projects, build web pages, and develop future-ready skills — all from the comfort of home.' },
     { q: 'Is it fully online?', a: 'Yes! The entire camp is delivered online via live, interactive sessions. Your child can join from home using a computer or laptop with internet access.' },
-    { q: 'How long is each session?', a: 'The camp runs over 3 days with 2-hour sessions each day, totaling 6 hours of structured learning, activities and creative projects.' },
+    { q: 'How long is each session?', a: 'The camp runs over 6 Months - 1 Year with 2-hour sessions each day, totaling 6 hours of structured learning, activities and creative projects.' },
     { q: 'Does my child need previous AI experience?', a: 'Not at all! The camp is beginner-friendly. Our facilitators guide children step-by-step, adapting to different age groups and experience levels.' },
     { q: 'Does my child need to create AI accounts?', a: 'No. AI tools are demonstrated by the facilitator. Children participate through guided activities without needing to create their own accounts.' },
     { q: 'Should a parent stay nearby?', a: 'Yes, we recommend a parent or responsible adult is nearby during sessions for safety and support, especially for younger children.' },
@@ -1014,7 +1014,7 @@ function FAQ() {
     { q: 'What will my child create?', a: 'Your child will create AI-generated artwork, build a simple web page, learn prompting skills, and complete a creative digital project they can showcase to you!' },
     { q: 'Is this like a normal holiday club?', a: 'It\'s better! No travel costs, no logistics, and your child gains tangible digital skills. Plus, all the fun and social interaction of a holiday club from home.' },
     { q: 'Does this require DBS checks?', a: 'Yes, all our facilitators undergo appropriate background checks including DBS clearance to ensure children\'s safety.' },
-    { q: 'Will my child get a certificate?', a: 'Yes! Every child receives a Clap Academy Certificate of Completion and an AI Creator Badge to celebrate their achievement.' },
+    { q: 'Will my child get a certificate?', a: 'Yes! Every child receives a Elevena Academy Certificate of Completion and an AI Creator Badge to celebrate their achievement.' },
     { q: 'What happens after the camp?', a: 'Your child receives a workbook, prompting cheat sheet, and access to the Kids Learning Hub preview for continued learning.' },
     { q: 'How do I register?', a: 'Simply fill out the registration form below with your details and your child\'s information. Complete the payment to secure their place.' },
   ];
@@ -1154,7 +1154,7 @@ function RegisterForm() {
   //               </label>
   //               <label className="flex items-start gap-3 cursor-pointer">
   //                 <input type="checkbox" name="updates" checked={formData.updates} onChange={handleCheckbox} className="mt-1 w-5 h-5 rounded border-gray-600 bg-[#1A1230] text-violet-600 focus:ring-violet-500" />
-  //                 <span className="text-sm text-gray-400">I agree to receive updates from Clap Academy.</span>
+  //                 <span className="text-sm text-gray-400">I agree to receive updates from Elevena Academy.</span>
   //               </label>
   //             </div>
   //           </div>
@@ -1210,7 +1210,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-violet-500/20"><Sparkles className="w-6 h-6 text-white" /></div>
-              <span className="text-xl font-[Fredoka_One]">Clap<span className="text-violet-400">Academy</span></span>
+              <span className="text-xl font-[Fredoka_One]">Elevena<span className="text-violet-400">Academy</span></span>
             </div>
             <p className="text-gray-500 leading-relaxed">Empowering the next generation with AI, coding, and digital creativity skills.</p>
           </div>
@@ -1225,7 +1225,7 @@ function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Camp Details</h4>
             <div className="space-y-3 text-gray-500">
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-violet-400" /><span>3 days, 2hrs per day</span></div>
+              <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-violet-400" /><span>6 Months - 1 Year, 2hrs per day</span></div>
               <div className="flex items-center gap-2"><Monitor className="w-4 h-4 text-violet-400" /><span>100% Online</span></div>
               <div className="flex items-center gap-2"><Users className="w-4 h-4 text-violet-400" /><span>Ages 5–16</span></div>
               <div className="flex items-center gap-2"><Wifi className="w-4 h-4 text-violet-400" /><span>Live & Interactive</span></div>
@@ -1234,7 +1234,7 @@ function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Contact Us</h4>
             <div className="space-y-3 text-gray-500">
-              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-violet-400" /><span>hello@clapacademy.co.uk</span></div>
+              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-violet-400" /><span>hello@Elevenaacademy.co.uk</span></div>
               <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-violet-400" /><span>+44 20 1234 5678</span></div>
               <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-green-400" /><span>WhatsApp Us</span></div>
             </div>
@@ -1244,7 +1244,7 @@ function Footer() {
           </div>
         </div>
         <div className="border-t border-violet-500/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Clap Academy. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Elevena Academy. All rights reserved.</p>
           <div className="flex items-center gap-6 text-gray-600 text-sm">
             <a href="#" className="hover:text-violet-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-violet-400 transition-colors">Terms of Service</a>
