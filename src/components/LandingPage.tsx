@@ -770,7 +770,7 @@ function CourseDetailModal({ course, onClose }: { course: CourseData; onClose: (
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <a
-              href="#register"
+              href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00"
               onClick={onClose}
               className={`flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r ${course.color} text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all`}
             >
