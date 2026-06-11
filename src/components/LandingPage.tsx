@@ -905,32 +905,32 @@ function Pricing() {
     { name: 'Family Bundle', price: '£150', desc: 'Up to 3 children', features: ['Full 6 Months - 1 Year class for 3 kids', 'All 8 bonuses per child', 'Certificates & badges', 'Parent showcase invite', 'Best value for families'], cta: 'Choose Family Bundle', color: 'from-pink-400 to-rose-500', popular: false },
   ];
 
-  return (
-    <section id="pricing" className="py-16 md:py-24 section-dark-alt">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block bg-violet-500/10 text-violet-400 px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-violet-500/20">💰 Simple Family-Friendly Pricing</span>
-          <h2 className="text-3xl md:text-5xl font-[Fredoka_One] text-white mb-4">Choose the Right <span className="gradient-text">Plan for Your Family</span></h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {plans.map((plan, i) => (
-            <div key={i} className={`bg-[#231B3A]/80 rounded-2xl p-6 md:p-8 card-hover relative border ${plan.popular ? 'border-violet-500/40 shadow-xl shadow-violet-500/10 ring-1 ring-violet-500/30' : 'border-violet-500/10'}`}>
-              {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-violet-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR ⭐</div>}
-              <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
-              <p className="text-sm text-gray-500 mb-4">{plan.desc}</p>
-              <div className="mb-6"><span className="text-4xl font-[Fredoka_One] text-white">{plan.price}</span></div>
-              <div className="space-y-3 mb-8">
-                {plan.features.map((f, j) => (
-                  <div key={j} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" /><span className="text-sm text-gray-400">{f}</span></div>
-                ))}
-              </div>
-              <a href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00" className={`block text-center bg-gradient-to-r ${plan.color} text-white py-3 rounded-full font-bold hover:shadow-lg transition-all`}>{plan.cta}</a>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+//   return (
+//     <section id="pricing" className="py-16 md:py-24 section-dark-alt">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="text-center mb-12 md:mb-16">
+//           <span className="inline-block bg-violet-500/10 text-violet-400 px-4 py-1.5 rounded-full text-sm font-bold mb-4 border border-violet-500/20">💰 Simple Family-Friendly Pricing</span>
+//           <h2 className="text-3xl md:text-5xl font-[Fredoka_One] text-white mb-4">Choose the Right <span className="gradient-text">Plan for Your Family</span></h2>
+//         </div>
+//         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {plans.map((plan, i) => (
+//             <div key={i} className={`bg-[#231B3A]/80 rounded-2xl p-6 md:p-8 card-hover relative border ${plan.popular ? 'border-violet-500/40 shadow-xl shadow-violet-500/10 ring-1 ring-violet-500/30' : 'border-violet-500/10'}`}>
+//               {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-violet-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR ⭐</div>}
+//               <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
+//               <p className="text-sm text-gray-500 mb-4">{plan.desc}</p>
+//               <div className="mb-6"><span className="text-4xl font-[Fredoka_One] text-white">{plan.price}</span></div>
+//               <div className="space-y-3 mb-8">
+//                 {plan.features.map((f, j) => (
+//                   <div key={j} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" /><span className="text-sm text-gray-400">{f}</span></div>
+//                 ))}
+//               </div>
+//               <a href="https://buy.stripe.com/fZubIU4rE4184pQcOJ7IY00" className={`block text-center bg-gradient-to-r ${plan.color} text-white py-3 rounded-full font-bold hover:shadow-lg transition-all`}>{plan.cta}</a>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
 }
 
 // ==================== SAFETY FIRST ====================
